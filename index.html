@@ -38,8 +38,11 @@
 
     <link rel="stylesheet" href="css/responsive.css">
 
+    <link rel="stylesheet" href="css/project-case-study.css">
+
     <link rel="stylesheet" href="css/contact.css">
 
+    
 </head>
 
 
@@ -1665,14 +1668,21 @@
 
 
 
-                            <a href="YOUR_ALOTE_WEBSITE_URL" class="project-link magnetic" target="\_blank"
-                                rel="noopener noreferrer" data-cursor="view">
-
-                                <span>Visit ALote</span>
-
-                                <span>↗</span>
-
-                            </a>
+                            <div class="project-actions">
+                            
+                                <a href="https://alote.vercel.app/" class="project-link magnetic" target="_blank" rel="noopener noreferrer"
+                                    data-cursor="view">
+                                    <span>Visit ALote</span>
+                                    <span>↗</span>
+                                </a>
+                            
+                            
+                                <button type="button" class="project-case-study-button" data-case-study="alote">
+                                    <span>View Case Study</span>
+                                    <span>→</span>
+                                </button>
+                            
+                            </div>
 
 
 
@@ -3770,7 +3780,221 @@
 
 
 
+<!-- =========================================
+     ALOTE CASE STUDY
+========================================== -->
 
+<div class="case-study-modal" id="aloteCaseStudy" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="aloteCaseStudyTitle">
+
+    <div class="case-study-backdrop"></div>
+
+
+    <div class="case-study-panel">
+
+        <!-- CLOSE -->
+
+        <button type="button" class="case-study-close" aria-label="Close case study">
+            <span>Close</span>
+            <span>×</span>
+        </button>
+
+
+        <!-- HEADER -->
+
+        <div class="case-study-header">
+
+            <div class="case-study-header-main">
+
+                <span class="case-study-eyebrow">
+                    01 / CASE STUDY
+                </span>
+
+                <h2 id="aloteCaseStudyTitle">
+                    ALote
+                </h2>
+
+                <p>
+                    A Myanmar-focused job discovery
+                    platform designed to make finding
+                    opportunities simpler and more
+                    accessible.
+                </p>
+
+            </div>
+
+
+            <div class="case-study-meta">
+
+                <span>
+                    JOB DISCOVERY
+                </span>
+
+                <span>
+                    WEB PLATFORM
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SCREENSHOTS -->
+
+        <div class="case-study-gallery">
+
+            <figure class="case-study-image">
+
+                <img src="assets/L1.png" alt="ALote homepage">
+
+                <figcaption>
+                    01 — Job discovery homepage
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="case-study-image">
+
+                <img src="assets/L2.png" alt="ALote job search">
+
+                <figcaption>
+                    02 — Job search and discovery
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="case-study-image">
+
+                <img src="assets/L3.png" alt="ALote platform interface">
+
+                <figcaption>
+                    03 — Platform interface
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="case-study-content">
+
+            <div class="case-study-story">
+
+                <span class="case-study-label">
+                    ABOUT THE PRODUCT
+                </span>
+
+                <h3>
+                    Making opportunity
+                    easier to discover.
+                </h3>
+
+                <p>
+                    ALote is a Myanmar-focused job discovery
+                    platform built to connect people with
+                    relevant opportunities through a simpler
+                    digital experience.
+                </p>
+
+                <p>
+                    The project focuses on clear information
+                    architecture, accessible interfaces and
+                    a practical flow for discovering and
+                    exploring jobs.
+                </p>
+
+            </div>
+
+
+            <div class="case-study-stack">
+
+                <span class="case-study-label">
+                    TECH STACK
+                </span>
+
+
+                <div class="case-study-tech-grid">
+
+                    <div class="case-study-tech-item">
+
+                        <strong>
+                            Backend
+                        </strong>
+
+                        <span>
+                            Laravel · PHP
+                        </span>
+
+                    </div>
+
+
+                    <div class="case-study-tech-item">
+
+                        <strong>
+                            Frontend
+                        </strong>
+
+                        <span>
+                            JavaScript · HTML · CSS
+                        </span>
+
+                    </div>
+
+
+                    <div class="case-study-tech-item">
+
+                        <strong>
+                            Database
+                        </strong>
+
+                        <span>
+                            PostgreSQL
+                        </span>
+
+                    </div>
+
+
+                    <div class="case-study-tech-item">
+
+                        <strong>
+                            Design
+                        </strong>
+
+                        <span>
+                            UI / UX
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="case-study-footer">
+
+            <span>
+                DEVORBIT / ALOTE
+            </span>
+
+
+            <button type="button" class="case-study-close case-study-close-bottom">
+                Close Case Study ↗
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 
@@ -3790,7 +4014,7 @@
 
     <script src="js/cursor.js"></script>
 
-
+<script src="js/project-case-study.js"></script>
 
 </body>
 

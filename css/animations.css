@@ -406,6 +406,8 @@
     }
 
 }
+
+
 /* =========================================
    ORBIT CARD MOTION
 ========================================= */
@@ -415,16 +417,22 @@
         floatingCard 5s ease-in-out infinite;
 }
 
+
 .orbit-card-zaysai {
     animation:
         floatingCard 5.5s ease-in-out infinite reverse;
 }
+
 
 .orbit-card-web {
     animation:
         floatingCard 6s ease-in-out infinite;
 }
 
+
+/* =========================================
+   STATUS PULSE
+========================================= */
 
 @keyframes statusPulse {
 
@@ -452,6 +460,10 @@
 }
 
 
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
 @keyframes scrollIndicator {
 
     0% {
@@ -471,35 +483,114 @@
 
 }
 
+
 /* =========================================
    PROJECT STATS MOTION
 ========================================= */
 
 .stats-section .stat-item {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity:
+        0;
+
+    transform:
+        translateY(30px);
+
     transition:
         opacity 900ms var(--ease),
         transform 900ms var(--ease);
 }
 
+
 .stats-section .stat-item.revealed {
-    opacity: 1;
-    transform: translateY(0);
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
 }
+
 
 .stats-section .stat-item:nth-child(1) {
-    transition-delay: 0ms;
+    transition-delay:
+        0ms;
 }
+
 
 .stats-section .stat-item:nth-child(2) {
-    transition-delay: 80ms;
+    transition-delay:
+        80ms;
 }
+
 
 .stats-section .stat-item:nth-child(3) {
-    transition-delay: 160ms;
+    transition-delay:
+        160ms;
 }
 
+
 .stats-section .stat-item:nth-child(4) {
-    transition-delay: 240ms;
+    transition-delay:
+        240ms;
+}
+
+
+/* =========================================
+   CASE STUDY BUTTON
+   CLICK / INTERACTION FIX
+========================================= */
+
+.project-actions {
+    position:
+        relative;
+
+    z-index:
+        50;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    pointer-events:
+        auto;
+}
+
+
+.project-case-study-button {
+    position:
+        relative;
+
+    z-index:
+        100;
+
+    pointer-events:
+        auto !important;
+
+    cursor:
+        pointer;
+
+    user-select:
+        none;
+
+    -webkit-user-select:
+        none;
+}
+
+
+.project-case-study-button span {
+    pointer-events:
+        none;
+}
+
+
+.project-link {
+    position:
+        relative;
+
+    z-index:
+        50;
 }
