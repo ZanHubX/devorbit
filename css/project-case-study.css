@@ -110,7 +110,8 @@
 
     background: transparent;
 
-    color: #111;
+    /* THEME COLOR */
+    color: var(--text);
 
     font-family: inherit;
 
@@ -133,6 +134,7 @@
     transform: none;
 
     transition:
+        color 0.25s ease,
         opacity 0.25s ease;
 }
 
@@ -199,7 +201,8 @@
 
     border: none !important;
 
-    color: #111 !important;
+    /* THEME COLOR */
+    color: var(--text) !important;
 
     opacity: 0.6;
 
