@@ -1917,3 +1917,111 @@ body.case-study-open {
     }
 
 }
+
+/* =========================================
+   WHISKERS & WHISPERS CASE STUDY VISUAL
+========================================= */
+
+.whiskers-case-visual {
+    position: relative;
+    min-height: clamp(360px, 48vw, 650px);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 48%, rgba(146, 94, 181, .23), transparent 38%),
+        linear-gradient(145deg, #1a1121, #09080e);
+}
+
+.whiskers-case-orbit {
+    position: absolute;
+    border: 1px solid rgba(216, 183, 239, .15);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.whiskers-case-orbit-one {
+    width: min(68vw, 600px);
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 55px rgba(216, 183, 239, .025), 0 0 0 110px rgba(216, 183, 239, .018);
+}
+
+.whiskers-case-orbit-two {
+    width: min(42vw, 360px);
+    aspect-ratio: 1;
+    border-style: dashed;
+    animation: whiskersCaseOrbit 38s linear infinite;
+}
+
+.whiskers-case-visual-content {
+    position: relative;
+    z-index: 2;
+    width: min(780px, 88%);
+    text-align: center;
+}
+
+.whiskers-case-kicker {
+    color: #d3b0e9;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .25em;
+}
+
+.whiskers-case-star {
+    display: block;
+    margin: 25px 0 16px;
+    color: #e5c9f6;
+    font-size: 34px;
+    text-shadow: 0 0 30px rgba(208, 157, 242, .55);
+}
+
+.whiskers-case-visual-content h2 {
+    margin: 0;
+    color: #fbf1ff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 7vw, 94px);
+    font-weight: 400;
+    letter-spacing: -.055em;
+    line-height: .98;
+}
+
+.whiskers-case-visual-content p {
+    margin: 22px 0 0;
+    color: rgba(246, 230, 255, .65);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.case-outcome-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+    color: var(--case-text);
+    font-size: 12px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--case-border-strong);
+    padding-bottom: 8px;
+}
+
+.case-outcome-link span {
+    transition: transform 300ms ease;
+}
+
+.case-outcome-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+@keyframes whiskersCaseOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .whiskers-case-visual {
+        min-height: 380px;
+    }
+    .whiskers-case-orbit-one { width: 310px; }
+    .whiskers-case-orbit-two { width: 210px; }
+}
