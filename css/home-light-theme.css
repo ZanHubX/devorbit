@@ -5449,3 +5449,152 @@ body.light-theme .featured-project:hover .project-frame::after {
             none !important;
     }
 }
+
+/* =========================================
+   WHISKERS & WHISPERS ARCANA PROJECT
+========================================= */
+
+.project-whiskers-arcana {
+    margin-top: 180px;
+}
+
+.whiskers-arcana-preview {
+    min-height: 560px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 42%, rgba(132, 90, 190, 0.18), transparent 42%),
+        linear-gradient(135deg, #17111e, #09090d 72%);
+}
+
+.whiskers-arcana-preview::before,
+.whiskers-arcana-preview::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(199, 171, 230, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.whiskers-arcana-preview::before {
+    width: 390px;
+    height: 390px;
+    box-shadow: 0 0 0 48px rgba(199, 171, 230, 0.025),
+                0 0 0 96px rgba(199, 171, 230, 0.02);
+}
+
+.whiskers-arcana-preview::after {
+    width: 250px;
+    height: 250px;
+    animation: arcanaOrbit 18s linear infinite;
+}
+
+.whiskers-arcana-preview-content {
+    position: relative;
+    z-index: 2;
+    width: min(78%, 620px);
+    text-align: center;
+}
+
+.whiskers-arcana-preview-content .preview-label {
+    color: #c6a5eb;
+}
+
+.whiskers-arcana-preview-content h3 {
+    margin-top: 18px;
+    color: #f5edf9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5vw, 4.6rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.whiskers-arcana-preview-content p {
+    margin: 18px auto 0;
+    max-width: 390px;
+    color: rgba(245, 237, 249, 0.65);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.whiskers-arcana-interface {
+    width: min(440px, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 42px auto 0;
+}
+
+.whiskers-arcana-interface-card {
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid rgba(210, 181, 237, 0.2);
+    border-radius: 8px;
+    background: linear-gradient(145deg, rgba(185, 144, 218, 0.12), rgba(255,255,255,0.025));
+    backdrop-filter: blur(8px);
+    transition: transform 500ms var(--ease), border-color 400ms ease, background 400ms ease;
+}
+
+.whiskers-arcana-interface-card span {
+    width: 27px;
+    height: 27px;
+    border: 1px solid rgba(221, 194, 244, 0.65);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(167, 115, 213, 0.18);
+}
+
+.whiskers-arcana-interface-card div {
+    width: 65%;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(235, 218, 248, 0.45);
+}
+
+.project-whiskers-arcana:hover .whiskers-arcana-interface-card:nth-child(1) {
+    transform: translateY(-8px) rotate(-2deg);
+    border-color: rgba(190, 144, 226, 0.5);
+}
+
+.project-whiskers-arcana:hover .whiskers-arcana-interface-card:nth-child(2) {
+    transform: translateY(-14px);
+    border-color: rgba(190, 144, 226, 0.65);
+}
+
+.project-whiskers-arcana:hover .whiskers-arcana-interface-card:nth-child(3) {
+    transform: translateY(-8px) rotate(2deg);
+    border-color: rgba(190, 144, 226, 0.5);
+}
+
+@keyframes arcanaOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .whiskers-arcana-preview {
+        min-height: 400px;
+    }
+
+    .whiskers-arcana-preview-content {
+        width: 88%;
+    }
+
+    .whiskers-arcana-interface {
+        gap: 7px;
+        margin-top: 28px;
+    }
+
+    .whiskers-arcana-interface-card {
+        min-height: 72px;
+        padding: 9px;
+    }
+}
