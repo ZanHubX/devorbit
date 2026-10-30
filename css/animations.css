@@ -28,6 +28,9 @@
         visibility 900ms var(--ease),
         background-color 500ms ease,
         color 500ms ease;
+
+    /* Fallback: hide the loader even if JavaScript fails. */
+    animation: loaderFailsafe 0s 4s forwards;
 }
 
 
@@ -36,6 +39,15 @@
 
     visibility:
         hidden;
+}
+
+
+@keyframes loaderFailsafe {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 
