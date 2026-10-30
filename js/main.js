@@ -93,7 +93,7 @@
 
         // Failsafe: never leave the visitor stuck behind the loader.
         // The normal load event hides it sooner; this also covers a stalled asset.
-        setTimeout(hideLoader, 3000);
+        setTimeout(hideLoader, 2200);
 
     }
 
