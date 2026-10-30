@@ -23,7 +23,12 @@
             performance.now();
 
 
+        let loaderHidden = false;
+
         function hideLoader() {
+
+            if (loaderHidden) return;
+            loaderHidden = true;
 
             const elapsed =
                 performance.now() -
@@ -86,19 +91,9 @@
         }
 
 
-        setTimeout(() => {
-
-            if (
-                !loader.classList.contains(
-                    "hidden"
-                )
-            ) {
-
-                hideLoader();
-
-            }
-
-        }, 5000);
+        // Failsafe: never leave the visitor stuck behind the loader.
+        // The normal load event hides it sooner; this also covers a stalled asset.
+        setTimeout(hideLoader, 3000);
 
     }
 
